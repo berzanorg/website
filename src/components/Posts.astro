@@ -3,28 +3,22 @@ import { getCollection } from "astro:content";
 const allPosts = await getCollection("posts");
 ---
 
-<style>
-    nav {
+<style is:global>
+    nav > ul {
         display: flex;
         flex-direction: column;
-    }
-    a {
-        background-color: rgb(24, 24, 27);
-        padding: 1rem;
-        border-radius: 0.5rem;
-    }
-    a p {
-        text-decoration: none;
-        color: red;
+        gap: 0.5rem;
     }
 </style>
 
 <nav>
-    {
-        allPosts.map((post) => (
-            <a href={`/${post.slug}`}>
-                <h3>{post.data.title}</h3>
-            </a>
-        ))
-    }
+    <ul>
+        {
+            allPosts.map((post) => (
+                <li>
+                    <a href={`/${post.slug}`}>{post.data.title}</a>
+                </li>
+            ))
+        }
+    </ul>
 </nav>

@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("posts");
+---
+
+<style>
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    a {
+        background-color: rgb(24, 24, 27);
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+    a p {
+        text-decoration: none;
+        color: red;
+    }
+</style>
+
+<nav>
+    {
+        allPosts.map((post) => (
+            <a href={`/${post.slug}`}>
+                <h3>{post.data.title}</h3>
+            </a>
+        ))
+    }
+</nav>

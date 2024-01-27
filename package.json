@@ -1,19 +1,15 @@
 {
-  "name": "website",
-  "type": "module",
-  "version": "0.0.1",
   "scripts": {
-    "dev": "bunx --bun astro dev",
-    "start": "bunx --bun astro dev",
-    "build": "bunx --bun astro check && bunx --bun astro build",
-    "preview": "bunx --bun astro preview",
     "astro": "bunx --bun astro"
   },
   "dependencies": {
-    "astro": "^4.2.4"
-  },
-  "devDependencies": {
     "@astrojs/check": "^0.4.1",
+    "@astrojs/mdx": "^2.1.0",
+    "@astrojs/sitemap": "^3.0.5",
+    "@tailwindcss/typography": "^0.5.10",
+    "astro": "^4.2.4",
+    "astro-meta-tags": "^0.2.1",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   }
 }

@@ -1,9 +1,28 @@
 ---
 import "../styles/index.css";
+import "../styles/markdown.css";
 import Head from "../components/Head.astro";
 
 const { frontmatter, path } = Astro.props;
 ---
+
+<style is:global>
+	main > a:nth-child(1) {
+		text-align: center;
+		color: #ffffff;
+		text-decoration: none;
+	}
+
+	main > p:nth-child(2) {
+		text-align: center;
+		color: #bbb;
+	}
+
+	main > p:nth-child(3) {
+		text-align: center;
+		color: #bbb;
+	}
+</style>
 
 <html lang="en">
 	<Head
@@ -14,6 +33,9 @@ const { frontmatter, path } = Astro.props;
 	/>
 	<body>
 		<main>
+			<a href="/"><h1>{frontmatter.title}</h1></a>
+			<p>{frontmatter.description}</p>
+			<br />
 			<slot />
 		</main>
 	</body>

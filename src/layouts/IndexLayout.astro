@@ -1,0 +1,18 @@
+---
+import "../styles/index.css";
+import Head from "../components/Head.astro";
+---
+
+<html lang="en">
+    <Head
+        title={"Berzan"}
+        description="Berzan's website and blog."
+        url=`https://berzan.org`
+        keywords="berzan, berzan blog, berzan website"
+    />
+    <body>
+        <main>
+            <slot />
+        </main>
+    </body>
+</html>

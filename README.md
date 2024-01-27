@@ -38,19 +38,25 @@ https://tailwindcss.com/docs/installation
 ### Develop
 
 ```shell
-$ bun run dev
+$ bun astro dev
 ```
 
 ### Build
 
 ```shell
-$ bun run build
+$ bun astro build
 ```
 
 ### Preview
 
 ```shell
-$ bun run preview
+$ bun astro preview
+```
+
+### Check
+
+```shell
+$ bun astro check
 ```
 
 ## Note

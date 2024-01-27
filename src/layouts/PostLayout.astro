@@ -1,0 +1,20 @@
+---
+import "../styles/index.css";
+import Head from "../components/Head.astro";
+
+const { frontmatter, path } = Astro.props;
+---
+
+<html lang="en">
+	<Head
+		title={frontmatter.title}
+		description={frontmatter.description}
+		url=`https://berzan.org/${path}`
+		keywords={frontmatter.keywords.join(", ")}
+	/>
+	<body>
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>

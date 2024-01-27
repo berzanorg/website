@@ -4,7 +4,13 @@
     },
     "customizations": {
         "vscode": {
-            "extensions": ["astro-build.astro-vscode"]
+            "extensions": [
+                "astro-build.astro-vscode",
+                "unifiedjs.vscode-mdx"
+            ],
+            "settings": {
+                "editor.formatOnSave": true
+            }
         }
     }
 }

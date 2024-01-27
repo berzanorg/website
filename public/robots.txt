@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://berzan.org/sitemap-index.xml

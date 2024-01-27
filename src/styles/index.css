@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "Manrope";
+    src: url(/manrope.woff2);
+}
+
+@font-face {
+    font-family: "Commitmono";
+    src: url(/commitmono.woff2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Manrope", sans-serif;
+    background-color: rgb(44,45,48);
+    color: #ffffff;
+}
+
+body {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+main {
+    max-width: 56rem;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 700;
+}
+p {
+    font-weight: 500;
+}
+
+
+pre.astro-code {
+    padding: 1rem 1rem;
+    background-color: rgb(24,24,27) !important;
+    border-radius: 0.5rem;
+    font-family: "Commitmono", monospace;
+}
+
+pre.astro-code code {
+    font-family: "Commitmono", monospace;
+    line-height: 175%;
+}
+
+
+a {
+    color: #00eeff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}

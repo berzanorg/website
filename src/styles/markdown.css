@@ -6,7 +6,6 @@ h1, h2, h3 {
 }
 
 p {
-    font-weight: 500;
     line-height: 160%;
 }
 
@@ -24,8 +23,7 @@ pre.astro-code code {
 }
 
 a {
-    color: #95fbff;
-    font-weight: 600;
+    color: #ddd;
     line-height: 160%;
 }
 

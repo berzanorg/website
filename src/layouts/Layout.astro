@@ -1,0 +1,43 @@
+---
+import "../styles/base.css"
+import Head from "../components/Head.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+
+interface Props {
+	title: string
+	description: string
+	keywords: Array<string>
+	url: string
+	image: string
+}
+
+const { title, description, keywords, url, image } = Astro.props
+---
+
+<html lang="en">
+	<Head
+		title={title}
+		description={description}
+		keywords={keywords}
+		url={url}
+		image={image}
+	/>
+	<body
+		class="flex flex-col min-h-screen items-center bg-black font-['Lexend',_sans-serif]"
+	>
+		<Header />
+		<main
+			class="flex flex-col max-w-4xl w-full items-center px-4 py-8 flex-1"
+		>
+			<slot />
+		</main>
+		<Footer
+			telegram="https://t.me/BerzanOrg"
+			linkedin="https://www.linkedin.com/in/berzanorg"
+			github="https://github.com/BerzanOrg"
+			twitter="https://twitter.com/BerzanOrg"
+			email="mailto:me@berzan.org"
+		/>
+	</body>
+</html>

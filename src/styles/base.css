@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: "Lexend";
+		src: url("/public/fonts/lexend.ttf");
+		font-weight: 100 900;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Commitmono";
+		src: url("/public/fonts/commitmono.woff2");
+		font-weight: 200 700;
+		font-display: swap;
+	}
+}

@@ -1,0 +1,41 @@
+---
+interface Props {
+	telegram: string
+	linkedin: string
+	github: string
+	twitter: string
+	email: string
+}
+
+const { telegram, linkedin, github, twitter, email } = Astro.props
+---
+
+<footer class="pb-14 pt-32 flex w-full justify-center px-4">
+	<div class="gap-2 max-w-[65ch] w-full flex flex-col">
+		<p class="font-bold text-2xl">Contact Me</p>
+		<div class="flex flex-col gap-1.5">
+			<a
+				href={telegram}
+				class="font-medium underline text-cyan-400"
+				target="_blank">Telegram</a
+			>
+			<a
+				href={linkedin}
+				class="font-medium underline text-cyan-400"
+				target="_blank">LinkedIn</a
+			>
+			<a
+				href={github}
+				class="font-medium underline text-cyan-400"
+				target="_blank">GitHub</a
+			>
+			<a
+				href={twitter}
+				class="font-medium underline text-cyan-400"
+				target="_blank">Twitter</a
+			>
+			<a href={email} class="font-medium underline text-cyan-400">Email</a
+			>
+		</div>
+	</div>
+</footer>

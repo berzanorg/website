@@ -1,15 +1,23 @@
 {
-  "scripts": {
-    "astro": "bunx --bun astro"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.4.1",
-    "@astrojs/mdx": "^2.1.0",
-    "@astrojs/sitemap": "^3.0.5",
-    "@tailwindcss/typography": "^0.5.10",
-    "astro": "^4.2.4",
-    "astro-meta-tags": "^0.2.1",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
-  }
+	"scripts": {
+		"astro": "astro",
+		"dev": "astro dev",
+		"build": "astro build",
+		"check": "astro check",
+		"preview": "astro preview",
+		"format": "prettier . -w"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.4.1",
+		"@astrojs/mdx": "^2.1.0",
+		"@astrojs/sitemap": "^3.0.5",
+		"@astrojs/tailwind": "^5.1.0",
+		"astro": "^4.2.4",
+		"astro-meta-tags": "^0.2.1",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5.3.3",
+		"@tailwindcss/typography": "^0.5.10",
+		"prettier": "^3.2.4",
+		"prettier-plugin-tailwindcss": "^0.5.11"
+	}
 }

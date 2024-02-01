@@ -1,35 +1,46 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ViewTransitions } from "astro:transitions"
 
-const { title, description, url, keywords } = Astro.props;
+interface Props {
+	title: string
+	description: string
+	url: string
+	keywords: Array<string>
+	image: string
+}
+
+const { title, description, url, keywords, image } = Astro.props
 ---
 
 <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <meta name="author" content="Berzan" />
-    <meta name="description" content={description} />
-    <link rel="canonical" href={url} />
-    <meta name="keywords" content={keywords} />
-    <meta property="og:locale" content="en" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={url} />
-    <meta property="og:site_name" content="Berzan" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://berzan.org/berzan.jpg" />
-    <meta property="og:image:width" content="520" />
-    <meta property="og:image:height" content="520" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@BerzanOrg" />
-    <meta name="twitter:creator" content="@BerzanOrg" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:url" content={url} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image:src" content="https://berzan.org/berzan.jpg" />
-    <meta name="twitter:image:alt" content="Berzan's photo" />
-    <ViewTransitions />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="color-scheme" content="dark" />
+	<meta name="keywords" content={keywords.join(", ")} />
+	<meta name="generator" content={Astro.generator} />
+	<meta name="author" content="Berzan" />
+	<meta name="description" content={description} />
+	<meta property="og:locale" content="en" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={url} />
+	<meta property="og:site_name" content="Berzan" />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content={image} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@BerzanOrg" />
+	<meta name="twitter:creator" content="@BerzanOrg" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:url" content={url} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image:src" content={image} />
+
+	<title>{title}</title>
+
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="canonical" href={url} />
+	<ViewTransitions />
 </head>

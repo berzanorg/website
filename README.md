@@ -4,9 +4,17 @@ This repository contains the source code of my website, [berzan.org](https://ber
 
 My website's source code is licensed under [AGPL](https://www.gnu.org/licenses/agpl-3.0.en.html).
 
-I use [Astro](https://astro.build/), [Bun](https://bun.sh/) and [TailwindCSS](https://tailwindcss.com/) to develop my website.
+I use [Node.js](https://nodejs.org/en/), [Astro](https://astro.build/) and [TailwindCSS](https://tailwindcss.com/) to develop my website.
 
-You can find detailed information about [Astro](https://astro.build/), [Bun](https://bun.sh/) and [TailwindCSS](https://tailwindcss.com/) below.
+You can find detailed information about [Node.js](https://nodejs.org/en/), [Astro](https://astro.build/) and [TailwindCSS](https://tailwindcss.com/) below.
+
+## Node.js
+
+**Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.**
+
+Node.js lets developers use JavaScript to write command line tools and for server-side scripting.
+
+https://nodejs.org/en/learn/getting-started/introduction-to-nodejs
 
 ## Astro
 
@@ -14,16 +22,7 @@ You can find detailed information about [Astro](https://astro.build/), [Bun](htt
 
 Astro powers the world's fastest websites, client-side web apps, dynamic API endpoints, and everything in-between.
 
-
 https://docs.astro.build/en/getting-started/
-
-## Bun
-
-**Bun is an all-in-one toolkit for JavaScript and TypeScript apps.**
-
-Bun is a new JavaScript runtime built from scratch to serve the modern JavaScript ecosystem. 
-
-https://bun.sh/docs
 
 ## TailwindCSS
 
@@ -38,25 +37,31 @@ https://tailwindcss.com/docs/installation
 ### Develop
 
 ```shell
-$ bun astro dev
+$ npm run dev
 ```
 
 ### Build
 
 ```shell
-$ bun astro build
+$ npm run build
 ```
 
 ### Preview
 
 ```shell
-$ bun astro preview
+$ npm run preview
 ```
 
 ### Check
 
 ```shell
-$ bun astro check
+$ npm run check
+```
+
+### Format
+
+```shell
+$ npm run format
 ```
 
 ## Note

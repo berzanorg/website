@@ -18,14 +18,10 @@ const { Content } = await entry.render()
 	title={entry.data.title}
 	description={entry.data.description}
 	keywords={entry.data.keywords}
-	image=`https://berzan.org/images/${entry.slug}.jpg`
+	image=`https://berzan.org/og/${entry.slug}.jpg`
 	url=`https://berzan.org/posts/${entry.slug}`
 >
-	<article
-		class="prose w-full prose-invert prose-gray prose-code:font-['Commitmono',_monospace] prose-pre:rounded-sm prose-h1:font-bold prose-h2:font-bold prose-h3:font-semibold prose-a:text-cyan-400 prose-a:font-normal"
-	>
-		<h1>{entry.data.title}</h1>
-		<p>{entry.data.description}</p>
-		<Content />
-	</article>
+	<h1>{entry.data.title}</h1>
+	<p>{entry.data.description}</p>
+	<Content />
 </Layout>

@@ -7,6 +7,7 @@ import shikiTheme from "./shiki-theme.json"
 
 // https://astro.build/config
 export default defineConfig({
+	trailingSlash: "never",
 	site: "https://berzan.org",
 	integrations: [
 		mdx({

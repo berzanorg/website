@@ -1,0 +1,21 @@
+---
+import { getEntry } from "astro:content"
+import Layout from "../layouts/Layout.astro"
+
+const entry = await getEntry({
+	collection: "pages",
+	slug: "404",
+})
+
+const { Content } = await entry.render()
+---
+
+<Layout
+	title={entry.data.title}
+	description={entry.data.description}
+	keywords={entry.data.keywords}
+	image=`https://berzan.org/og/404.jpg`
+	url=`https://berzan.org/404`
+>
+	<Content />
+</Layout>

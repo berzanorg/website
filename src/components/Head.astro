@@ -1,6 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions"
-
 interface Props {
 	title: string
 	description: string
@@ -42,5 +40,4 @@ const { title, description, url, keywords, image } = Astro.props
 
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<link rel="canonical" href={url} />
-	<ViewTransitions />
 </head>

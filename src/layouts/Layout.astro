@@ -12,11 +12,21 @@ interface Props {
 	title: string
 	description: string
 	keywords: Array<string>
-	url: string
-	image: string
 }
 
-const { title, description, keywords, url, image } = Astro.props
+const { title, description, keywords } = Astro.props
+
+const url = Astro.url.origin + Astro.url.pathname
+
+const lastPathname = Astro.url.pathname.includes("/posts/")
+	? "/" + Astro.url.pathname.slice(7)
+	: Astro.url.pathname
+
+const image =
+	Astro.url.origin +
+	"/og" +
+	(lastPathname === "/" ? "/index" : lastPathname) +
+	".jpg"
 ---
 
 <Html>
@@ -37,7 +47,7 @@ const { title, description, keywords, url, image } = Astro.props
 		<Footer
 			telegram="https://t.me/BerzanOrg"
 			linkedin="https://www.linkedin.com/in/berzanorg"
-			github="https://github.com/BerzanOrg"
+			github="https://github.com/berzanorg"
 			twitter="https://twitter.com/BerzanOrg"
 			email="mailto:myself@berzan.org"
 		/>

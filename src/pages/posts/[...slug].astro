@@ -15,11 +15,9 @@ const { Content } = await entry.render()
 ---
 
 <Layout
-	title={entry.data.title}
+	title=`${entry.data.title} - Berzan`
 	description={entry.data.description}
 	keywords={entry.data.keywords}
-	image=`https://berzan.org/og/${entry.slug}.jpg`
-	url=`https://berzan.org/posts/${entry.slug}`
 >
 	<h1>{entry.data.title}</h1>
 	<p>{entry.data.description}</p>

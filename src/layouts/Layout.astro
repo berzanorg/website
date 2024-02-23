@@ -16,11 +16,11 @@ interface Props {
 
 const { title, description, keywords } = Astro.props
 
-const url = Astro.url.origin + Astro.url.pathname
+const url = Astro.url.origin + Astro.url.pathname.replace(".html", "")
 
 const lastPathname = Astro.url.pathname.includes("/posts/")
-	? "/" + Astro.url.pathname.slice(7)
-	: Astro.url.pathname
+	? "/" + Astro.url.pathname.slice(7).replace(".html", "")
+	: Astro.url.pathname.replace(".html", "")
 
 const image =
 	Astro.url.origin +
